@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* nav */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+#icon-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff4048;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff4048;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* carrusel de fotos */
+
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;    
+    padding: 0;
+    margin: auto;
+    height: 650px;
+}
+  
+.rslides li {
+    backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    height: 100%;
+    float: left;
+    width: 100%;
+    border: 0;
+    object-fit: cover;
+}
+
+.slide-fotos{
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    z-index: 10;
+    max-width: 700px;
+    transform: translate(-50%,-50%);
+    text-align: end;
+
+    h1{
+        font-size: 4rem;
+        color: #ff4048;
+    } 
+}
+
+.btn-join-now{
+    padding: 10px 20px;
+    background-color: #ff4048;
+    color: white;
+    text-decoration: none;
+}
+
+.rslides_nav.prev, .rslides_nav.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(100, 100, 100);
+    padding: 10px;
+    font-size: 3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    text-decoration: none;
+}
+
+.rslides_nav.prev {
+    left: 5%;
+}
+
+.rslides_nav.next {
+    right: 5%;
+}
+
+/* Servicios */
+
+.services {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.services h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.service-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 420px;
+    height: 420px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Contenedor del ícono con borde */
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 15%;
+    margin-bottom: 1rem;
+}
+
+.icon-container i {
+    font-size: 2rem;
+    color: #f00;
+}
+
+.service-item h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+}
+
+/* Galería */
+
+.gallery-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 50%;
+
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.info-gallery {
+    width: 30%;
+    padding-left: 20px;
+}
+
+.info-gallery h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info-gallery h1 span {
+    color: #000;
+
+}
+
+.info-gallery p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.btn-join-now {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff4c4c;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-join-now:hover {
+    background-color: #e04343;
+}
+
+
+/* Pie de página */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    align-items: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.315);
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+footer .icons {
+    display: flex;
+    gap: 10px;
+}
+
+footer .icons .circle-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #646464;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .icons .circle-icon i {
+    font-size: 0.8rem;
+    color: #ff4048;
+}
+
+/* boton fijo */
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff4048; 
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease; 
+    z-index: 1000;
+}
+
+#scrollToTop i {
+    font-size: 1rem; 
+}
+
+#scrollToTop:hover {
+    background-color: #e63946;
+}
+
+
+

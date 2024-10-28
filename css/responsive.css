@@ -1,0 +1,120 @@
+/* Media query para pantallas de 480px o menos */
+@media (max-width: 480px) {
+    /* Ajustes generales */
+    body {
+        font-size: 0.9rem;
+    }
+
+    /* Estilos para el header */
+    #icon-menu {
+        display: block;
+        color: brown;
+    }
+    
+    .logo{
+        display: flex;
+        flex-direction: row;
+        gap: 200px;
+        align-items: center;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    /* Clase activa para mostrar el menú */
+    nav.active {
+        display: flex;
+    }
+    .menu {
+        display: none;
+    }
+    .menu.active {
+        display: flex;
+    }
+
+    /* Ajuste del carrusel */
+    .rslides {
+        height: auto; /* Ajusta la altura para que el contenido se vea mejor en pantallas pequeñas */
+    }
+
+    .info {
+        top: 60%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+
+    .info h1 {
+        font-size: 2rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .btn-join-now {
+        padding: 8px 16px;
+    }
+
+    /* Servicios */
+    .services {
+        padding: 2rem 1rem;
+    }
+
+    .service-items {
+        flex-direction: column;
+    }
+
+    .service-item {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    /* Galería */
+    .gallery-info {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .gallery {
+        width: 100%;
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 5px;
+    }
+
+    .info-gallery {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .info-gallery h1 {
+        font-size: 1.5rem;
+    }
+
+    .info-gallery p {
+        font-size: 0.9rem;
+    }
+
+    /* Pie de página */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+    }
+
+    footer .icons {
+        justify-content: center;
+    }
+}
