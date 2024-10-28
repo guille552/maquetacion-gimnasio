@@ -22,9 +22,16 @@
         flex-direction: column;
         top: 60px;
         left: 0;
-        width: 100%;
+        width: 480px;
         padding: 1rem;
+        background-color: #ff4048;
     }
+    #ul-menu a{
+        width: 90%;
+        border-bottom: 2px white dotted;
+
+    }
+
     header{
         display: flex;
         flex-direction: column;
@@ -79,7 +86,7 @@
 
     /* Galería */
     .gallery-info {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 1rem;
     }
 
